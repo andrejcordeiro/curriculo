@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Currículo Eduardo José Cordeiro</title>
+</head>
+<style>
+    *{
+        border: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+    body{
+        width: 750px;
+        margin: auto;
+    }
+    .header{
+        width: 100%;
+        background: #fff;
+        float: left;
+        margin-top: 50px;
+    }
+    .header .image img{
+        border-radius: 120px;
+        float: left;
+        margin-left: 30px;
+    }
+    .header .name{
+        width: calc(100% - 120px);
+        margin-left: 180px;
+    }
+    .header .occupation{
+        width: calc(100% - 120px);
+        margin-left: 180px;
+        margin-top: -10px;
+        color: #777;
+        font-weight: lighter;
+        font-size: 20px;
+    }
+    .content{
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .content .infos{
+        background: #F2F3F5;
+        float: left;
+        width: calc(35% - 20px);
+        padding: 20px;
+        height: 235px;
+    }
+    .content .infos .line{
+        float: left;
+        width: 100%;
+    }
+    .content .infos img{
+        float: left;
+        margin-top: 8px;
+    }
+    .content .infos p{
+        float: left;
+        margin-left: 10px;
+        font-size: 14px;
+        color: #333;
+    }
+    .content .infos a{
+        text-decoration: none;
+        color: #333;
+    }
+    .content .education{
+        background: #E3E4E6;
+        float: left;
+        width: calc(65% - 60px);
+        padding: 10px 20px;
+        height: 255px;
+    }
+    .content .education .title{
+        float: left;
+        width: 100%;
+        height: 50px;
+        margin-left: 2px;
+    }
+    .content .education h3{
+        color: #2A5167;
+    }
+    .content .education .bar{
+        background: #C8CCD4;
+        float: left;
+        width: 100%;
+        height: 3px;
+        border-radius: 5px;
+    }
+    .content .education .bar .divbar{
+        background: #2A5167;
+        float: left;
+        width: 15%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .content .education .line{
+        float: left;
+        width: 100%;
+        margin: 10px 0;
+    }
+    .content .education .line img{
+        width: 75px;
+        border-radius: 75px;
+        float: left;
+        margin-top: 10px;
+    }
+    .content .education .line p{
+        color: #2A5167;
+        float: left;
+        margin-left: 15px;
+        width: calc(100% - 90px);
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+    .content .education .line span{
+        color: #2A5167;
+        float: left;
+        margin-left: 15px;
+        width: calc(100% - 90px);
+        font-size: 12px;
+    }
+    .content .know{
+        background: #fff;
+        float: left;
+        width: calc(35% - 20px);
+        padding: 12px 20px;
+        height: 405px;
+    }
+    .content .know .bar{
+        background: #C8CCD4;
+        float: left;
+        width: 100%;
+        height: 3px;
+        border-radius: 5px;
+    }
+    .content .know .bar .divbar{
+        background: #7C311F;
+        float: left;
+        width: 27%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .content .know .title{
+        float: left;
+        width: 100%;
+        height: 50px;
+        margin-left: 2px;
+    }
+    .content .know h3{
+        color: #7C311F;
+    }
+    .content .know .subtitle{
+        color: #777;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        float: left;
+        width: 100%;
+    }
+    .content .know .progress{
+        float: left;
+        margin: 10px 20px;
+        position: relative;
+    }
+    .content .know .progress img{
+        width: 60px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .content .know .progress .html{
+        width: 30px;
+        height: 30px;
+        border: 25px solid;
+        border-color: #EC652C #eee  #EC652C #EC652C;
+        transform: rotate(-135deg);
+        border-radius: 60px;
+    }
+    .content .know .progress .css{
+        width: 30px;
+        height: 30px;
+        border: 25px solid;
+        border-color: #389CD5 #eee  #389CD5 #389CD5;
+        transform: rotate(-135deg);
+        border-radius: 60px;
+    }
+    .content .know .progress .js{
+        width: 30px;
+        height: 30px;
+        border: 25px solid;
+        border-color: #eee #eee  #8EC026 #8EC026;
+        transform: rotate(-135deg);
+        border-radius: 60px;
+    }
+    .content .know .progress .php{
+        width: 30px;
+        height: 30px;
+        border: 25px solid;
+        border-color: #eee #eee  #F3E206 #F3E206;
+        transform: rotate(-135deg);
+        border-radius: 60px;
+    }
+    .content .know .progress .sql{
+        width: 30px;
+        height: 30px;
+        border: 25px solid;
+        border-color: #B677A9 #eee  #B677A9 #B677A9;
+        transform: rotate(-135deg);
+        border-radius: 60px;
+    }
+    .content .xp{
+        background: #EBECEE;
+        float: left;
+        width: calc(65% - 60px);
+        padding: 10px 20px;
+        height: 409px;
+    }
+    .content .xp .title{
+        float: left;
+        width: 100%;
+        height: 50px;
+        margin-left: 2px;
+    }
+    .content .xp h3{
+        color: #739B3F;
+    }
+    .content .xp .bar{
+        background: #C8CCD4;
+        float: left;
+        width: 100%;
+        height: 3px;
+        border-radius: 5px;
+    }
+    .content .xp .bar .divbar{
+        background: #739B3F;
+        float: left;
+        width: 15%;
+        height: 100%;
+        border-radius: 5px;
+    }
+    .content .xp .line{
+        float: left;
+        width: 100%;
+        margin: 10px 0;
+    }
+    .content .xp .line img{
+        width: 75px;
+        border-radius: 75px;
+        float: left;
+        margin-top: 10px;
+    }
+    .content .xp .line p{
+        color: #739B3F;
+        float: left;
+        margin-left: 15px;
+        width: calc(100% - 90px);
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+    .content .xp .line span{
+        color: #739B3F;
+        float: left;
+        margin-left: 15px;
+        width: calc(100% - 90px);
+        font-size: 12px;
+    }
+</style>
+<body>
+    <div class="header">
+        <div class="image">
+            <img width="120px" src="images/imagem.jpg" alt="Imagem">
+        </div>
+        <div class="name"><h1>EDUARDO JOSÉ CORDEIRO</h1></div>
+        <div class="occupation"><span>Desenvolvedor WEB</span></div>
+    </div>
+    <div class="content">
+        <div class="tres"></div>
+        <div class="infos">
+            <div class="line"><img src="images/casa.png" alt="Localização"><p> Armação - Penha - SC </p></div>
+            <div class="line"><img src="images/data.png" alt="Data de nascimento"><p> 04 de agosto de 1999 </p></div>
+            <div class="line"><img src="images/telefone.png" alt="Telefone"><p> (47) 99272-2835 </p></div>
+            <div class="line"><img src="images/email.png" alt="Telefone"><p> edujcordeiro99@gmail.com </p></div>
+            <div class="line"><a target="_blank" href="https://github.com/edujcordeiro"> <img src="images/git4.png" alt="Telefone"><p> github.com/edujcordeiro </a></p></div>
+        </div>
+        <div class="education">
+            <div class="title">
+                <h3>EDUCAÇÃO</h3>
+            </div>
+            <div class="bar"><div class="divbar"></div></div>
+            <div class="line">
+                <img src="images/sociesc.png" alt="Sociesc">
+                <p>UNISOCIESC - Universidade Sociedade Educacional de Santa Catarina</p>
+                <span>2017 – 2020</span>
+                <span>Bacharelado em Sistemas de informação</span>
+            </div>
+            <div class="line">
+                <img src="images/univali.jfif" alt="Univali">
+                <p>UNIVALI - Universidade do Vale do Itajaí</p>
+                <span>2021 – o momento</span>
+                <span>Curso superior de tecnologia em sistemas para internet</span>
+            </div>
+        </div>
+        <div class="know">
+            <div class="title">
+                <h3>CONHECIMENTOS</h3>
+            </div>
+            <div class="bar"><div class="divbar"></div></div>
+            <div class="subtitle">Linguagens</div>
+            <div class="progress">
+                <div class="html"></div>
+                <img src="images/html.png" alt="html">
+            </div>
+            <div class="progress">
+                <div class="css"></div>
+                <img src="images/css.png" alt="css">
+            </div>
+            <div class="progress">
+                <div class="js"></div>
+                <img src="images/js.png" alt="js">
+            </div>
+            <div class="progress">
+                <div class="php"></div>
+                <img src="images/php.png" alt="php">
+            </div>
+            <div class="progress">
+                <div class="sql"></div>
+                <img src="images/sql.png" alt="sql">
+            </div>
+        </div>
+        <div class="xp">
+            <div class="title">
+                <h3>EXPERIÊNCIA PROFISSIONAL</h3>
+            </div>
+            <div class="bar"><div class="divbar"></div></div>
+            <div class="line">
+                <img src="images/hospedapp.png" alt="Hospedapp">
+                <p>Hospedapp</p>
+                <span>jul 2016 – jul 2018 | <b>Desenvolvedor</b></span>
+                <span>Desenvolvimento do sistema completo</span>
+            </div>
+            <div class="line">
+                <img src="images/softrental.png" alt="SoftRental">
+                <p>SoftRental</p>
+                <span>jan 2019 – o momento | <b>Desenvolvedor</b></span>
+                <span>Desenvolvimento do sistema completo</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
